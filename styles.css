@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #191919; /* Черный цвет фона */
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    color: #ffffff;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.click-area {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #61dafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Тень вокруг кружка */
+}
+
+.click-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.plus-one {
+    position: absolute;
+    font-size: 24px;
+    color: #ff0000;
+    opacity: 0;
+    pointer-events: none;
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+.shop {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.item {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #000000;
+}
+
+.item:hover {
+    background-color: #f9f9f9;
+}
+
+.coin-image {
+    width: 20px; /* Размер изображения монеты */
+    vertical-align: middle;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Все остальные стили остаются теми же */
+
+.circle-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+}
+
+/* Все остальные стили остаются теми же */
+
+.top-right {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.coin-box {
+    background-color: #868686;
+    color: #191919;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.coin-image {
+    width: 20px; /* Размер изображения монеты */
+    height: auto;
+    margin-right: 5px;
+}
+
+#coins {
+    font-size: 18px;
+    font-weight: bold;
+}

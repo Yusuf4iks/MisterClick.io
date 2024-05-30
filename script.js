@@ -14,6 +14,35 @@ const procenttElement = document.querySelector('.procentt');
 const rankElement = document.querySelector('h3.class');
 const levelElement = document.querySelector('p.classLvl span');
 
+// Функция для загрузки сохраненных значений или установки начальных значений
+function loadGameState() {
+    coins = parseInt(localStorage.getItem('coins')) || 0;
+    PerClick = parseInt(localStorage.getItem('PerClick')) || 1;
+    PlusOne = parseInt(localStorage.getItem('PlusOne')) || 1;
+
+    updateLevelAndRank();  // Обновить уровень и ранг на основе загруженных данных
+    coinElement.textContent = coins;
+    updateProgressBar();
+}
+
+// Функция для сохранения текущего состояния игры в localStorage
+function saveGameState() {
+    localStorage.setItem('coins', coins.toString());
+    localStorage.setItem('PerClick', PerClick.toString());
+    localStorage.setItem('PlusOne', PlusOne.toString());
+}
+
+function clearGameState() {
+    localStorage.removeItem('coins');
+    localStorage.removeItem('PerClick');
+    localStorage.removeItem('PlusOne');
+}
+
+// Добавить вызов функции загрузки состояния при загрузке страницы
+document.addEventListener('DOMContentLoaded', loadGameState);
+
+setInterval(saveGameState, 10000);
+
 clickArea.addEventListener('click', (event) => {
     coins+=PerClick;
     coinElement.textContent = coins;
@@ -60,6 +89,7 @@ clickArea.addEventListener('click', (event) => {
         }, 100);
 
         // Обновить ширину псевдоэлемента ::after
+        saveGameState();
         updateProgressBar();
     }
 });
@@ -91,6 +121,10 @@ function updateLevelAndRank() {
     procenttElement.style.transition = 'width 0.3s';
     procenttElement.style.setProperty('--progress-width', `0%`);
     coinElement.textContent = coins;
+    if(currentLevel==2){
+        const circleImage = document.querySelector('.circle-image');
+        circleImage.src = 'https://i.postimg.cc/qvHrsnzG/1-removebg-preview.png';
+    }
 }
 
 function buyItem(item) {

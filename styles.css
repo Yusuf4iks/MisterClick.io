@@ -153,6 +153,18 @@ h1 {
     animation: fadeOut 1s forwards;
 }
 
+button:focus {
+    outline: none; 
+    box-shadow: none;
+  }
+  
+.activeP {
+    color: white;
+}
+.inactiveP {
+    color: #a7a7a7;
+}
+
 @keyframes fadeOut {
     0% {
         opacity: 1;

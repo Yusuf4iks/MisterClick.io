@@ -7,8 +7,13 @@ body {
     background-color: #0b202d;
     margin: 0;
     overflow: hidden;
-    user-select: none;
-    -webkit-user-drag: none;
+    user-select: none;              /* Современные браузеры */
+    -webkit-user-select: none;      /* Safari и старые версии Chrome */
+    -moz-user-select: none;         /* Firefox */
+    -ms-user-select: none;          /* Internet Explorer/Edge */
+    -webkit-user-drag: none;        /* Safari и старые версии Chrome */
+    user-drag: none;                /* Стандартный способ */
+    -webkit-touch-callout: none;    /* Отключение вызова контекстного меню на iOS */
 }
 .container {
     text-align: center;

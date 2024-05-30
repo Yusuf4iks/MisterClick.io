@@ -68,7 +68,7 @@ body {
     width: 85%;
     background: #2f2f2f;
     border-radius: 20px;
-    border: 0.5px solid rgb(100, 100, 100);
+    border: 0.5px solid rgb(71 71 71);
 }
 
 .procentt::after {
@@ -98,17 +98,22 @@ h1 {
     justify-content: space-evenly;
     bottom: 15px;
     height: 75px;
-    align-items: flex-end;
+    align-items: center;
     border-radius: 25px;
     background: #2d2c2e;
-    /* box-shadow: 0px -8px 20px #6c4b8a; */
+    padding: 7px;
 }
 
 .cl {
     position: relative;
-    bottom: 20%;
-    height: 45px;
-    width: 45px;
+    height: 100%;
+    background: none;
+    border: none;
+    border-radius: 25%;
+    width: 25%;
+}
+.cl.active {
+    background: #1a1a1a;
 }
 .click-area {
     position: relative;
@@ -142,7 +147,7 @@ h1 {
 
 .plus-one {
     position: absolute;
-    font-size: 24px;
+    font-size: 35px;
     opacity: 0;
     pointer-events: none;
     animation: fadeOut 1s forwards;
@@ -155,7 +160,7 @@ h1 {
     }
     100% {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-150px);
     }
 }
 

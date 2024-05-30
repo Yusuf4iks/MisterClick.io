@@ -33,8 +33,8 @@ clickArea.addEventListener('click', (event) => {
         setTimeout(() => {
             plusOneH2.style.opacity = '0';
         plusOneH2.style.color = 'white';
-            plusOneH2.style.transform = 'translateY(-50px)';
-        }, 1);
+            plusOneH2.style.transform = 'translateY(-100px)';
+        }, 10);
 
         // Удалить элемент h2 после завершения анимации
         setTimeout(() => {

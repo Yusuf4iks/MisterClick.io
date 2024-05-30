@@ -4,7 +4,7 @@ let PerClick = 1;
 let currentLevel = 1;
 let PlusOne = 1;
 const maxLevels = 9;
-const levelThresholds = [0, 500, 5000, 50000, 100000, 1000000, 25000000, 100000000, 1000000000];
+const levelThresholds = [0, 1000, 5000, 50000, 100000, 1000000, 25000000, 100000000, 1000000000];
 const ranks = ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Epic', 'Legendary', 'Master', 'Grandmaster'];
 
 const coinElement = document.getElementById('coins');

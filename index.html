@@ -8,31 +8,42 @@
 </head>
 <body>
     <div class="container">
-        <h1>Кликер Игра</h1>
         <div class="top-right">
             <div class="coin-box">
                 <img src="https://s1.iconbird.com/ico/2013/3/635/w257h2561393885383110.png" alt="Монета" class="coin-image">
                 <span id="coins">0</span>
             </div>
         </div>
-        <div class="click-area" id="click-area">
-            <img id="random-image" src="https://placekitten.com/200/200" >
-            <span class="plus-one" id="plus-one">+1</span>
-            <img src="https://s1.iconbird.com/ico/2013/3/635/w257h2561393885383110.png" alt="Картинка" class="circle-image">
+	<div class='procent'>
+	<div class='progress'>
+	<h3 class="class" style="
+    		margin: 0px;
+	">Bronze &gt;</h3>
+	<p class="classLvl" style="
+	color: grey;
+	">Level <span style="
+    		font-size: large;
+    		font-weight: 700;
+    		color: white;
+    ">1/9</span></p>
+	</div>
+	<div class='procentt'></div>
+	</div>
+        <div class="click-area" id="click-area" style="transform: rotateX(0deg) rotateY(0deg);">
+            <img id="random-image" src="https://placekitten.com/200/200">
+            <span class="plus-one animate" id="plus-one" style="left: 94.9999px; top: 148.273px;">+1</span>
+            <img src="https://i.postimg.cc/pT7G1cm5/348-oooo-plus-removebg-preview.png" class="circle-image">
         </div>
-        <h2>Магазин</h2>
-        <div class="shop">
-            <div class="item" onclick="buyItem('crypto')">
-                <p>Крипта - 100 монет</p>
-                <p>Доход: 1 монета/час</p>
-            </div>
-            <div class="item" onclick="buyItem('exchange')">
-                <p>Биржа - 500 монет</p>
-                <p>Доход: 5 монет/час</p>
-            </div>
-        </div>
-        <p>Доход в час: <span id="income">0</span></p>
+        
+        
     </div>
+<div class="menu">
+<button class="gameG cl"></button>
+<button class="shopG cl"></button>
+<button class="friendsG cl"></button>
+<button class="boostG cl"></button>
+</div>
     <script src="script.js"></script>
-</body>
-</html>
+
+
+</body></html>
